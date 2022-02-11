@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="../../css/global.css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Boxiocns CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <title>Digichain</title>
+    <link rel="icon" href="img/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="header">
+        <div class="logo-details">
+            <i class='bx bx-menu'></i>
+            <img style="width: 100%; z-index: 2;" src="img/digi.svg" alt="">
+        </div>
+        <a href="#"><button id="myBtn">Connect</button></a>
+
+        <!-- <div class="home-content"> -->
+        <!--  
+    <i class='bx bx-menu' style="z-index: -2;" onclick="changeIcon(this)"></i> 
+    <img src="img/digi.svg " alt="">
+    -->
+        <!-- </div> -->
+    </div>
+
+    <div class="sidebar close">
+        <ul class="nav-links">
+            <li>
+                <a href="../../Home/index.html">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="link_name">Home</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Home</a></li>
+                </ul>
+            </li>
+
+            <!--  
+            <li>
+                <a href="#">
+                    <i class='bx bx-line-chart'></i>
+                    <span class="link_name">Trade</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Trade</a></li>
+                </ul>
+            </li>
+            -->
+
+            <li class="nav-links-active">
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-rocket'></i>
+                        <span class="link_name">Launchpad</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Launchpad</a></li>
+                    <li><a href="../Create-Launchpad/index.html">Create Launchpad</a></li>
+                    <li class="sub-nav-links-active"><a href="../Create Fair-Launch/index.html">Create Fair Launch</a>
+                    </li>
+                    <li><a href="../Create-Token/index.html">Create Token</a></li>
+                    <li><a href="../Launchpad-List/index.html">Launchpad List</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-lock-open-alt'></i>
+                        <span class="link_name">Lock</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Lock</a></li>
+                    <li><a href="../../Lock/Create-Lock/index.html">Create Lock</a></li>
+                    <li><a href="../../Lock/Token/index.html">Token</a></li>
+                    <li><a href="../../Lock/Liquidity/index.html">Liquidity</a></li>
+                </ul>
+            </li>
+
+            <!--  
+            <li>
+                <a href="#">
+                    <i class='bx bx-pie-chart-alt-2'></i>
+                    <span class="link_name">Farming</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Farming</a></li>
+                </ul>
+            </li>
+            -->
+
+            <li>
+                <a href="#">
+                    <i class='bx bxs-droplet-half'></i>
+                    <span class="link_name">Pools</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Pools</a></li>
+                </ul>
+            </li>
+
+            <!--  
+            <li>
+                <a href="#">
+                    <i class='bx bxs-tree'></i>
+                    <span class="link_name">Jungles</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Jungles</a></li>
+                </ul>
+            </li>
+            -->
+
+            <li>
+                <div class="iocn-link">
+                    <a href="">
+                        <i class='bx bx-plug'></i>
+                        <span class="link_name">Ecosystem</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="https://bscscan.com/token/0x4732a86106064577933552fcea993d30bec950a5"
+                            target="_blank">Ecosystem</a></li>
+                    <li><a href="https://bscscan.com/token/0x4732a86106064577933552fcea993d30bec950a5"
+                            target="_blank">BscScan</a></li>
+                    <li><a href="https://prodigichain.com/" target="_blank">Prodigichain</a></li>
+                </ul>
+            </li>
+
+            <li>
+                <div class="iocn-link">
+                    <a href="#">
+                        <i class='bx bx-dots-horizontal-rounded'></i>
+                        <span class="link_name">More</span>
+                    </a>
+                    <i class='bx bxs-chevron-down arrow'></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">More</a></li>
+                    <li><a href="https://prodigichain.com/" target="_blank">Website</a></li>
+                    <li><a href="https://github.com/prodigichain" target="_blank">GitHub</a></li>
+                    <li><a href="https://prodigichain.com/whitepaper/digipaper.pdf" target="_blank">Whitepaper</a></li>
+                    <li><a href="https://prodigichain.com/roadmap.html" target="_blank">Roadmap</a></li>
+                    <li><a href="https://prodigichain.medium.com/" target="_blank">Blog</a></li>
+                </ul>
+            </li>
+
+            <li>
+
+                <!--  
+    <div class="profile-details">
+      <div class="profile-content">
+        <img src="image/profile.jpg" alt="profileImg">
+      </div>
+      <div class="name-job">
+        <div class="profile_name">Prem Shahi</div>
+        <div class="job">Web Desginer</div>
+      </div>
+      <i class='bx bx-log-out' ></i>
+    </div>
+    -->
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="form-container">
+            <form id="form" action="#" class="form">
+                <h1 class="text-center">Create fair launch</h1>
+                <!-- Progress bar -->
+                <div class="progressbar">
+                    <div class="progress" id="progress"></div>
+
+                    <div class="progress-step progress-step-active" data-title="Verify Token"></div>
+                    <div class="progress-step" data-title="DeFi Fairlaunch Info"></div>
+                    <div class="progress-step" data-title="Add Additional Info"></div>
+                    <div class="progress-step" data-title="Finish"></div>
+                </div>
+
+                <!-- Steps -->
+                <div class="form-step form-step-active">
+                    <div class="input-group">
+                        <label for="username">Token Address</label>
+                        <input type="text" name="token" id="token" placeholder="Ex : DigiMoon" required />
+                        <p style="color: #008df2; font-size: 0.9em; margin-top: 0.2rem;">Create pool fee: 1 BNB</p>
+                        <div class="error"></div>
+                    </div>
+                    <div class="">
+                        <a href="#" class="btn btn-next width-50 ml-auto">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="input-group">
+                        <label for="username">Token Addres</label>
+                        <input type="text" name="token" id="token" placeholder="Ex : DigiMoon" />
+                        <div class="error"></div>
+                    </div>
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="input-group">
+                        <label for="username">Token Addres</label>
+                        <input type="text" name="token" id="token" placeholder="Ex : DigiMoon" />
+                    </div>
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <a href="#" class="btn btn-next">Next</a>
+                    </div>
+                </div>
+                <div class="form-step">
+                    <div class="input-group">
+                        <label for="username">Token Addres</label>
+                        <input type="text" name="token" id="token" placeholder="Ex : DigiMoon" />
+                    </div>
+                    <div class="btns-group">
+                        <a href="#" class="btn btn-prev">Previous</a>
+                        <input type="submit" value="Submit" class="btn" onclick="showAlert()" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <footer>
+            <p>Digidex 2021 | by Digichain</p>
+            <a href="https://bscscan.com/token/0x4732a86106064577933552fcea993d30bec950a5#balances"
+                target="_blank"><button>Token Verifier</button></a>
+        </footer>
+    </section>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="closee">&times;</span>
+            <p>Connect to a wallet</p>
+            <hr>
+            <a href="" class="link"><span>Metamask</span><img src="img/metamask.svg" alt=""></a>
+
+            <a href="" class="link"><span>TrustWallet</span> <img src="img/trustwallet.png" alt=""> </a>
+
+            <a href="" class="link"><span>MathWallet</span> <img src="img/mathwallet.png" alt=""></a>
+
+            <a href="" class="link"><span>TockenPocket</span> <img src="img/tokenpocket.png" alt=""></a>
+
+            <a href="" class="link"><span>Wallet Connect</span> <img src="img/walletconnect.svg" alt=""> </a>
+
+            <a href="" class="link"><span>Binance Chain Wallet</span> <img src="img/binance.png" alt=""> </a>
+
+            <a class="learn" href="">Learn how to connect</a>
+        </div>
+    </div>
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e) => {
+                let arrowParent = e.target.parentElement.parentElement;
+                arrowParent.classList.toggle("showMenu");
+            });
+        }
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("close");
+        });
+
+        let changeIcon = function (icon) {
+            icon.classList.toggle('.bx-left-indent')
+        }
+
+        const prevBtns = document.querySelectorAll(".btn-prev");
+        const nextBtns = document.querySelectorAll(".btn-next");
+        const progress = document.getElementById("progress");
+        const formSteps = document.querySelectorAll(".form-step");
+        const progressSteps = document.querySelectorAll(".progress-step");
+
+        function showAlert() {
+            alert("Your form successfully Submitted!");
+            location.reload();
+        }
+
+        let formStepsNum = 0;
+
+        nextBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNum++;
+                updateFormSteps();
+                updateProgressbar();
+            });
+
+        });
+
+        prevBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                formStepsNum--;
+                updateFormSteps();
+                updateProgressbar();
+            });
+        });
+
+        function updateFormSteps() {
+            formSteps.forEach((formStep) => {
+                formStep.classList.contains("form-step-active") &&
+                    formStep.classList.remove("form-step-active");
+            });
+
+            formSteps[formStepsNum].classList.add("form-step-active");
+        }
+
+        function updateProgressbar() {
+            progressSteps.forEach((progressStep, idx) => {
+                if (idx < formStepsNum + 1) {
+                    progressStep.classList.add("progress-step-active");
+                } else {
+                    progressStep.classList.remove("progress-step-active");
+                }
+            });
+
+            const progressActive = document.querySelectorAll(".progress-step-active");
+
+            progress.style.width =
+                ((progressActive.length - 1) / (progressSteps.length - 1)) * 100 + "%";
+        }
+
+        const token = document.getElementById('token')
+        const form = document.getElementById('form')
+        const errorElement = document.getElementById('error')
+
+        form.addEventListener(".btn-next", (e) => {
+            let messages = []
+            if (token.value === '' || token.value == null) {
+                messages.push('Token is required')
+            }
+            if (messages.length > 0) {
+                e.preventDefault()
+                errorElement.innerText = messages.join(', ')
+            }
+
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("closee")[0];
+
+        // When the user clicks the button, open the modal 
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>

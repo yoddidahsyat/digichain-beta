@@ -1,0 +1,165 @@
+
+.home-section .content button {
+    margin-left: 0px;
+    background-color: #008DF2;
+    color: #FFFFFF;
+    margin-top: 30px;
+    width: 110px;
+    height: 40px;
+    font-weight: bold;
+    border-radius: 18px;
+    border: 1px solid #008DF2;
+}
+
+.home-section .content button:hover {
+    opacity: 50%;
+    cursor: pointer;
+}
+
+.home-section button {
+    margin-left: 30px;
+}
+
+.main-container {
+    padding: 30px;
+}
+
+
+/* HEADING */
+
+.heading {
+    color: white;
+    font-size: 20px;
+    text-align: left;
+}
+
+.heading__title {
+    font-weight: 600;
+}
+
+.tab-line hr {
+    border-color: #121827;
+}
+
+.tab-line {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-line input[type="radio"] {
+    display: none;
+}
+
+.tab-line label {
+    padding: 25px;
+    color: #fff;
+    font-weight: 400;
+    order: 0;
+}
+
+.tab-line label:hover {
+    color: #008df2;
+    transition: all 0.5s ease;
+}
+
+.tab-line .tabcontent {
+    width: 100%;
+    order: 1;
+    display: none;
+    overflow-x: auto;
+}
+
+.tab-line input[type='radio']:checked+label+.tabcontent {
+    display: block;
+}
+
+.tab-line input[type="radio"]:checked+label {
+    border-bottom: 1px solid #008df2;
+    color: #008df2;
+}
+
+.tab-line .tabcontent .noData {
+    color: #fff;
+    margin-left: -4rem;
+    text-align: center;
+}
+
+.tab-line .tabcontent hr {
+    border-color: #121827;
+}
+
+.func {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.search input {
+    border: 1px solid gray;
+    border-radius: 40px;
+    width: 100%;
+    padding: 8px;
+    text-align: left;
+}
+
+.search input:hover {
+    border: 1px solid;
+    border-color: #008df2;
+    transition: all 0.5s ease;
+}
+
+.heading__credits .heading__link {
+    color: inherit;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td,
+th {
+    color: #fff;
+    border: none;
+    text-align: left;
+    padding: 8px;
+}
+
+table td {
+    border-bottom: 1px solid #121827;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+table .token {
+    display: flex;
+}
+
+table .token p {
+    margin-top: 0.3rem;
+}
+
+table td img {
+    width: 60px;
+    object-fit: contain;
+    margin-right: 1rem;
+}
+
+table td a {
+    text-decoration: none;
+    color: #fff;
+}
+
+table td a:hover {
+    color: #008df2;
+    transition: all 0.2s ease;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 599.98px) {
+    table td img {
+        width: 40px;
+    }
+}
