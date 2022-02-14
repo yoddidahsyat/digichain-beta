@@ -273,7 +273,7 @@
     height: 35px;
 }
 
-.header #myBtn {
+.header #myBtn, .header .myBtn {
     cursor: pointer;
     background-color: #008DF2;
     color: #FFFFFF;
@@ -287,7 +287,7 @@
     border: 1px solid #008df2;
 }
 
-.header #myBtn:hover {
+.header #myBtn:hover,  .header .myBtn:hover {
     opacity: 50%;
 }
 

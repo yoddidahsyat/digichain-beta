@@ -21,7 +21,7 @@
             <i class='bx bx-menu'></i>
             <img style="width: 100%; z-index: 2;" src="img/digi.svg" alt="">
         </div>
-        <a href="#"><button id="myBtn">Connect</button></a>
+        <button id="btn-connect" class="myBtn">Connect</button>
 
 
         <!-- <div class="home-content"> -->
@@ -177,6 +177,9 @@
     <section class="home-section">
         <div class="content-container">
             <div class="content">
+                <div id="alert-error-https" style="display: none; background-color: tomato; margin: 0 0 2rem;">
+                    You can run this example only over HTTPS connection.
+                </div>
                 <h1>THE LAUNCHPAD PROTOCOL FOR CRYPTO ENTHUSIAST</h1><br>
                 <P>DigiLaunchpad come to help everyone to create their own tokens, lock LP in few seconds. The purpose
                     of
@@ -187,38 +190,51 @@
             </div>
         </div>
 
+        <div id="connected" style="display: none">
+
+            <button class="btn btn-primary" id="btn-disconnect">
+              Disconnect wallet
+            </button>
+
+            <hr>
+
+            <div id="network">
+              <p>
+                <strong>Connected blockchain:</strong> <span id="network-name"></span>
+              </p>
+
+              <p>
+                <strong>Selected account:</strong> <span id="selected-account"></span>
+              </p>
+
+            </div>
+
+            <hr>
+
+            <h3>All account balances</h3>
+
+            <table class="table table-listing">
+              <thead>
+                <th>Address</th>
+                <th>ETH balance</th>
+              </thead>
+
+              <tbody id="accounts">
+              </tbody>
+            </table>
+
+            <p>Please try to switch between different accounts in your wallet if your wallet supports this functonality.</p>
+
+          </div>
+
+        </div>
+
         <footer>
             <p>Digidex 2021 | by Digichain</p>
             <a href="https://bscscan.com/token/0x4732a86106064577933552fcea993d30bec950a5#balances"
                 target="_blank"><button>Token Verifier</button></a>
         </footer>
     </section>
-
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-
-        <!-- Modal content -->
-        <div class="modal-content">
-            <span class="closee">&times;</span>
-            <p>Connect to a wallet</p>
-            <hr>
-            <a href="" class="link"><span>Metamask</span><img src="img/metamask.svg" alt=""></a>
-
-            <a href="" class="link"><span>TrustWallet</span> <img src="img/trustwallet.png" alt=""> </a>
-
-            <a href="" class="link"><span>MathWallet</span> <img src="img/mathwallet.png" alt=""></a>
-
-            <a href="" class="link"><span>TockenPocket</span> <img src="img/tokenpocket.png" alt=""></a>
-
-            <a href="" class="link"><span>Wallet Connect</span> <img src="img/walletconnect.svg" alt=""> </a>
-
-            <a href="" class="link"><span>Binance Chain Wallet</span> <img src="img/binance.png" alt=""> </a>
-
-            <a class="learn" href="">Learn how to connect</a>
-        </div>
-
-
-    </div>
 
     <script>
         let arrow = document.querySelectorAll(".arrow");
@@ -261,6 +277,14 @@
             }
         }
     </script>
+    <script type="text/javascript" src="https://unpkg.com/web3@1.2.11/dist/web3.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@walletconnect/web3-provider@1.2.1/dist/umd/index.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/fortmatic@2.0.6/dist/fortmatic.js"></script>
+
+    <!-- This is our example code -->
+    <script type="text/javascript" src="./web3modal.js"></script>
 </body>
 
 </html>
