@@ -9,9 +9,20 @@
 
     <!-- Boxiocns CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Digichain</title>
     <link rel="icon" href="img/logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #btn-disconnect {
+            width: auto;
+            padding: 10px;
+            margin: 10px;
+        }
+        .sidebar, .sidebar:hover, .close {
+            opacity: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -21,7 +32,9 @@
             <i class='bx bx-menu'></i>
             <img style="width: 100%; z-index: 2;" src="img/digi.svg" alt="">
         </div>
-        <button id="btn-connect" class="myBtn">Connect</button>
+        <div id="prepare">
+            <button id="btn-connect" class="myBtn">Connect</button>
+        </div>
 
 
         <!-- <div class="home-content"> -->
@@ -175,7 +188,7 @@
 
 
     <section class="home-section">
-        <div class="content-container">
+        <div class="content-container" style="flex-direction: column; justify-content: center">
             <div class="content">
                 <div id="alert-error-https" style="display: none; background-color: tomato; margin: 0 0 2rem;">
                     You can run this example only over HTTPS connection.
@@ -188,56 +201,60 @@
                     world. But remember to still DYOR!</P>
                 <a href="../launchpad/Create-Token/index.html"><button>Create Now</button></a>
             </div>
+            
+            <br>
+        
+            <div id="connected" class="content" style="display: none; word-break: break-all">
+
+                <button class="btn btn-primary" id="btn-disconnect">
+                  Disconnect wallet
+                </button>
+    
+                <hr>
+    
+                <div id="network">
+                  <p>
+                    <strong>Connected blockchain:</strong> <span id="network-name"></span>
+                  </p>
+    
+                  <p>
+                    <strong>Selected account:</strong> <span id="selected-account"></span>
+                  </p>
+    
+                </div>
+    
+                <hr>
+    
+                <h3>All account balances</h3>
+    
+                <table class="table table-listing" style="width: 100%">
+                  <thead>
+                      <tr>
+                        <th>Address</th>
+                        <th>ETH balance</th>
+                      </tr>
+                  </thead>
+    
+                  <tbody id="accounts">
+                  </tbody>
+                </table>
+    
+                <p style="word-break:normal">Please try to switch between different accounts in your wallet if your wallet supports this functonality.</p>
+    
+              </div>
+              
+              <!-- We use simple <template> templating for the example -->
+                <div id="templates" style="display: none">
+                  <template id="template-balance">
+                    <tr>
+                      <th class="address"></th>
+                      <td class="balance"></td>
+                    </tr>
+                  </template>
+                </div>
+            
         </div>
 
-        <div id="connected" style="display: none">
-
-            <button class="btn btn-primary" id="btn-disconnect">
-              Disconnect wallet
-            </button>
-
-            <hr>
-
-            <div id="network">
-              <p>
-                <strong>Connected blockchain:</strong> <span id="network-name"></span>
-              </p>
-
-              <p>
-                <strong>Selected account:</strong> <span id="selected-account"></span>
-              </p>
-
-            </div>
-
-            <hr>
-
-            <h3>All account balances</h3>
-
-            <table class="table table-listing">
-              <thead>
-                <th>Address</th>
-                <th>ETH balance</th>
-              </thead>
-
-              <tbody id="accounts">
-              </tbody>
-            </table>
-
-            <p>Please try to switch between different accounts in your wallet if your wallet supports this functonality.</p>
-
-             <!-- We use simple <template> templating for the example -->
-            <div id="templates" style="display: none">
-                <template id="template-balance">
-                <tr>
-                    <th class="address"></th>
-                    <td class="balance"></td>
-                </tr>
-                </template>
-            </div>
-
-          </div>
-
-        </div>
 
         <footer>
             <p>Digidex 2021 | by Digichain</p>

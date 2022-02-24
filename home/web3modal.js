@@ -46,9 +46,25 @@ function init() {
   // like MetaMask, Brave or Opera is added automatically by Web3modal
   
   const providerOptions = {
-    binancechainwallet: {
-      package: true
-    }
+        walletconnect: {
+          package: WalletConnectProvider,
+          options: {
+            // Mikko's test key - don't copy as your mileage may vary
+            infuraId: "8043bb2cf99347b1bfadfb233c5325c0",
+          }
+        },
+
+        fortmatic: {
+            package: Fortmatic,
+            options: {
+            // Mikko's TESTNET api key
+            key: "pk_test_391E26A3B43A3350"
+          }
+        },
+        
+        binancechainwallet: {
+            package: true
+        }
   };
 
   web3Modal = new Web3Modal({
@@ -89,6 +105,7 @@ async function fetchAccountData() {
   // Get a handl
   const template = document.querySelector("#template-balance");
   const accountContainer = document.querySelector("#accounts");
+  console.log(accountContainer)
 
   // Purge UI elements any previously loaded accounts
   accountContainer.innerHTML = '';
